@@ -2,13 +2,16 @@ function comprar(){
     let tipoIngressoUser = document.getElementById("tipo-ingresso").value;
     let qtdIngressoUser = parseInt(document.getElementById("qtd").value);
 
-    
-    if(tipoIngressoUser == "pista"){
-        comprarPista(qtdIngressoUser);
-    }else if(tipoIngressoUser == "superior"){
-        comprarCadeiraSup(qtdIngressoUser);
-    } else if(tipoIngressoUser == "inferior"){
-        comprarCadeiraInf(qtdIngressoUser);
+    if (qtdIngressoUser > 0){
+        if(tipoIngressoUser == "pista"){
+            comprarPista(qtdIngressoUser);
+        }else if(tipoIngressoUser == "superior"){
+            comprarCadeiraSup(qtdIngressoUser);
+        } else if(tipoIngressoUser == "inferior"){
+            comprarCadeiraInf(qtdIngressoUser);
+        }
+    } else {
+        alert("Insira um valor Válido!")
     }
 }
 
